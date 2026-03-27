@@ -2,348 +2,228 @@
    1. RESET E CONFIGURAÇÕES GERAIS
    ========================================= */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif; /* A fonte que você importou */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* PADRÃO: MODO ESCURO (Dark Mode por padrão) */
 body {
-  background: #0a0a0a;
-  color: white;
-  transition: background 0.3s, color 0.3s;
+    background: #0a0a0a;
+    color: white;
+    transition: background 0.3s, color 0.3s;
+    overflow-x: hidden;
 }
 
 /* =========================================
    2. NAVBAR
    ========================================= */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  background: #111;
-  transition: 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: #111;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
-  color: #ff3c3c;
-  font-weight: 700;
-  font-size: 28px;
+    color: #ff3c3c;
+    font-weight: 700;
+    font-size: 28px;
 }
 
 nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: white; /* Cor no modo escuro */
-  font-weight: 500;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #ff3c3c;
-}
-
-#toggleTema {
-  cursor: pointer;
-  background: transparent;
-  border: 1px solid #444;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: white;
-}
-
-/* =========================================
-   3. HERO SECTION (CONTEÚDO PRINCIPAL)
-   ========================================= */
-.hero {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 90vh;
-  padding: 20px;
-}
-
-.texto h2 {
-  color: #ff3c3c;
-  font-size: 45px;
-  font-weight: 700;
-}
-
-.desc {
-  margin: 15px 0;
-  color: #aaa;
-  max-width: 500px;
-}
-
-/* CARDS */
-.cards {
-  display: flex;
-  gap: 15px;
-  margin: 25px 0;
-}
-
-.card {
-  background: #161616;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  border: 1px solid #222;
-  min-width: 100px;
-}
-
-.card h3 {
-  color: #ff3c3c;
-  font-size: 24px;
-}
-
-/* BOTÕES */
-.botoes {
-  display: flex;
-  gap: 15px;
-}
-
-.btn {
-  background: #ff3c3c;
-  border: none;
-  padding: 12px 25px;
-  color: white;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.btn-outline {
-  background: transparent;
-  border: 1px solid #ff3c3c;
-  padding: 12px 25px;
-  color: white;
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.btn:hover, .btn-outline:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(255, 60, 60, 0.4);
-}
-
-/* =========================================
-   4. IMAGEM COM GLOW
-   ========================================= */
-.imagem img {
-  width: 700px; /* Ajustado para um tamanho bom, mude se quiser */
-  max-width: 100%;
-  border-radius: 15px;
-  border: 2px solid #ff3c3c;
-  box-shadow: 0 0 25px #ff3c3c;
-  transition: 0.4s;
-}
-
-.imagem img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 45px #ff3c3c;
-}
-
-/* =========================================
-   5. ☀️ MODO CLARO (Ativado via Classe .dark)
-   ========================================= */
-
-/* Quando o body tiver a classe .dark, estas regras sobrescrevem as de cima */
-.dark {
-  background: #f5f5f5;
-  color: #111;
-}
-
-.dark .navbar {
-  background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.dark nav a {
-  color: #333;
-}
-
-.dark .card {
-  background: white;
-  border: 1px solid #ddd;
-  color: #111;
-}
-
-.dark .desc {
-  color: #555;
-}
-
-.dark .btn-outline {
-  color: #333;
-}
-
-.dark #toggleTema {
-  color: black;
-  border-color: #ccc;
-}
-/* =========================================
-   ESTILOS EXCLUSIVOS DA PÁGINA SOBRE
-   ========================================= */
-.sobre-detalhado {
-    padding: 80px 10% 100px; /* Espaçamento nas laterais */
-    background-color: #0a0a0a;
-}
-
-.container-sobre {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.sobre-header {
-    margin-bottom: 50px;
-}
-
-.sobre-header .tag {
-    color: #ff3c3c;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.sobre-header h1 {
-    font-size: 45px;
-    margin-top: 10px;
-}
-
-/* GRID DOS CARDS */
-.grid-sobre {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.card-texto {
-    background: #151515;
-    padding: 35px;
-    border-radius: 15px;
-    border-bottom: 4px solid #ff3c3c;
+    margin: 0 15px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
     transition: 0.3s;
 }
 
-.card-texto:hover {
-    transform: translateY(-10px);
-    background: #1a1a1a;
-}
-
-.card-texto i {
-    font-size: 35px;
+nav a:hover {
     color: #ff3c3c;
-    margin-bottom: 20px;
-    display: block;
 }
 
-.card-texto h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
+#toggleTema {
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #444;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
 }
 
-.card-texto p {
+/* =========================================
+   3. HERO SECTION (GRID LAYOUT)
+   ========================================= */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide em duas colunas */
+    gap: 50px;
+    padding: 60px 10%;
+    align-items: start; /* Alinha o conteúdo no topo */
+    min-height: 90vh;
+}
+
+/* Coluna da Esquerda */
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto h2 {
+    color: #ff3c3c;
+    font-size: 45px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.desc {
+    margin: 20px 0;
     color: #aaa;
     line-height: 1.6;
 }
 
-/* TAGS DE ESTUDO */
-.metas {
-    margin-top: 60px;
-}
-
-.status-estudo {
+/* Cards de Estatísticas */
+.cards {
     display: flex;
-    flex-wrap: wrap;
     gap: 15px;
-    justify-content: center;
-    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
-.skill-tag {
-    background: #111;
-    border: 1px solid #333;
-    padding: 8px 20px;
-    border-radius: 50px;
-    font-size: 14px;
-    color: #ccc;
+.card {
+    background: #161616;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #222;
+    flex: 1;
+}
+
+.card h3 {
+    color: #ff3c3c;
+    font-size: 24px;
+}
+
+/* Botões */
+.botoes {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    background: #ff3c3c;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
     transition: 0.3s;
 }
 
-.skill-tag:hover {
-    border-color: #ff3c3c;
+.btn-outline {
+    background: transparent;
+    border: 1px solid #ff3c3c;
+    padding: 12px 25px;
     color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
 }
 
-.btn-voltar {
-    margin-top: 50px;
+.btn:hover, .btn-outline:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 60, 60, 0.4);
 }
+
 /* =========================================
-   ESTILOS DA SEÇÃO DE CONTATO
+   4. COLUNA DA DIREITA (IMAGEM + CONTATO)
    ========================================= */
+.imagem {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start; /* ALINHA TUDO À ESQUERDA DA COLUNA */
+}
+
+.imagem img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    border: 2px solid #ff3c3c;
+    box-shadow: 0 0 30px #ff3c3c;
+    transition: 0.4s;
+}
+
+.imagem img:hover {
+    transform: scale(1.02);
+}
+
+/* Estilo do Contato embutido na coluna */
 .contato {
-    padding: 100px 20px;
-    text-align: center;
-    background-color: #0d0d0d;
+    text-align: left;
+    width: 100%;
 }
 
 .contato h2 {
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 10px;
-    color: white;
 }
 
 .contato p {
     color: #aaa;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .contato-links {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .contato-card {
     background: #151515;
-    padding: 30px;
+    padding: 20px;
     border-radius: 15px;
     text-decoration: none;
     color: white;
-    width: 250px;
+    flex: 1;
+    min-width: 200px;
     border: 1px solid #222;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s;
 }
 
 .contato-card i {
-    font-size: 40px;
+    font-size: 30px;
     color: #ff3c3c;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     display: block;
 }
 
-.contato-card span {
-    font-size: 20px;
-    font-weight: 700;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.contato-card p {
-    font-size: 14px;
-    margin-bottom: 0;
-}
-
-/* Efeito de Hover */
 .contato-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     border-color: #ff3c3c;
-    box-shadow: 0 0 20px rgba(255, 60, 60, 0.3);
+    box-shadow: 0 5px 15px rgba(255, 60, 60, 0.2);
 }
+
+/* =========================================
+   5. MODO CLARO
+   ========================================= */
+.dark {
+    background: #f5f5f5;
+    color: #111;
+}
+
+.dark .navbar { background: #ffffff; }
+.dark nav a { color: #333; }
+.dark .card, .dark .contato-card { 
+    background: white; 
+    border-color: #ddd; 
+    color: #111; 
+}
+.dark .desc, .dark .contato p { color: #555; }
