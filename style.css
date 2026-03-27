@@ -136,7 +136,7 @@ nav a:hover {
    4. IMAGEM COM GLOW
    ========================================= */
 .imagem img {
-  width: 500px; /* Ajustado para um tamanho bom, mude se quiser */
+  width: 700px; /* Ajustado para um tamanho bom, mude se quiser */
   max-width: 100%;
   border-radius: 15px;
   border: 2px solid #ff3c3c;
@@ -185,4 +185,165 @@ nav a:hover {
 .dark #toggleTema {
   color: black;
   border-color: #ccc;
+}
+/* =========================================
+   ESTILOS EXCLUSIVOS DA PÁGINA SOBRE
+   ========================================= */
+.sobre-detalhado {
+    padding: 80px 10% 100px; /* Espaçamento nas laterais */
+    background-color: #0a0a0a;
+}
+
+.container-sobre {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sobre-header {
+    margin-bottom: 50px;
+}
+
+.sobre-header .tag {
+    color: #ff3c3c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.sobre-header h1 {
+    font-size: 45px;
+    margin-top: 10px;
+}
+
+/* GRID DOS CARDS */
+.grid-sobre {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card-texto {
+    background: #151515;
+    padding: 35px;
+    border-radius: 15px;
+    border-bottom: 4px solid #ff3c3c;
+    transition: 0.3s;
+}
+
+.card-texto:hover {
+    transform: translateY(-10px);
+    background: #1a1a1a;
+}
+
+.card-texto i {
+    font-size: 35px;
+    color: #ff3c3c;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.card-texto h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.card-texto p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+/* TAGS DE ESTUDO */
+.metas {
+    margin-top: 60px;
+}
+
+.status-estudo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.skill-tag {
+    background: #111;
+    border: 1px solid #333;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.skill-tag:hover {
+    border-color: #ff3c3c;
+    color: white;
+}
+
+.btn-voltar {
+    margin-top: 50px;
+}
+/* =========================================
+   ESTILOS DA SEÇÃO DE CONTATO
+   ========================================= */
+.contato {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #0d0d0d;
+}
+
+.contato h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.contato p {
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+.contato-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.contato-card {
+    background: #151515;
+    padding: 30px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    width: 250px;
+    border: 1px solid #222;
+    transition: 0.3s ease-in-out;
+}
+
+.contato-card i {
+    font-size: 40px;
+    color: #ff3c3c;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.contato-card span {
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contato-card p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* Efeito de Hover */
+.contato-card:hover {
+    transform: translateY(-10px);
+    border-color: #ff3c3c;
+    box-shadow: 0 0 20px rgba(255, 60, 60, 0.3);
 }
