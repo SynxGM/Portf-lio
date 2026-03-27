@@ -1,0 +1,188 @@
+/* =========================================
+   1. RESET E CONFIGURAÇÕES GERAIS
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* A fonte que você importou */
+}
+
+/* PADRÃO: MODO ESCURO (Dark Mode por padrão) */
+body {
+  background: #0a0a0a;
+  color: white;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* =========================================
+   2. NAVBAR
+   ========================================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #111;
+  transition: 0.3s;
+}
+
+.logo {
+  color: #ff3c3c;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white; /* Cor no modo escuro */
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #ff3c3c;
+}
+
+#toggleTema {
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #444;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+/* =========================================
+   3. HERO SECTION (CONTEÚDO PRINCIPAL)
+   ========================================= */
+.hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 90vh;
+  padding: 20px;
+}
+
+.texto h2 {
+  color: #ff3c3c;
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.desc {
+  margin: 15px 0;
+  color: #aaa;
+  max-width: 500px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.card {
+  background: #161616;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #222;
+  min-width: 100px;
+}
+
+.card h3 {
+  color: #ff3c3c;
+  font-size: 24px;
+}
+
+/* BOTÕES */
+.botoes {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  background: #ff3c3c;
+  border: none;
+  padding: 12px 25px;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #ff3c3c;
+  padding: 12px 25px;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover, .btn-outline:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 60, 60, 0.4);
+}
+
+/* =========================================
+   4. IMAGEM COM GLOW
+   ========================================= */
+.imagem img {
+  width: 500px; /* Ajustado para um tamanho bom, mude se quiser */
+  max-width: 100%;
+  border-radius: 15px;
+  border: 2px solid #ff3c3c;
+  box-shadow: 0 0 25px #ff3c3c;
+  transition: 0.4s;
+}
+
+.imagem img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 45px #ff3c3c;
+}
+
+/* =========================================
+   5. ☀️ MODO CLARO (Ativado via Classe .dark)
+   ========================================= */
+
+/* Quando o body tiver a classe .dark, estas regras sobrescrevem as de cima */
+.dark {
+  background: #f5f5f5;
+  color: #111;
+}
+
+.dark .navbar {
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.dark nav a {
+  color: #333;
+}
+
+.dark .card {
+  background: white;
+  border: 1px solid #ddd;
+  color: #111;
+}
+
+.dark .desc {
+  color: #555;
+}
+
+.dark .btn-outline {
+  color: #333;
+}
+
+.dark #toggleTema {
+  color: black;
+  border-color: #ccc;
+}
