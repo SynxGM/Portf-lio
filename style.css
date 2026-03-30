@@ -227,3 +227,114 @@ nav a:hover {
     color: #111; 
 }
 .dark .desc, .dark .contato p { color: #555; }
+.dark .btn-outline {
+    color: #000; /* Define a cor do texto como preto */
+    border-color: #ff3c3c;
+}
+/* =========================================
+   ESTILIZAÇÃO DA PÁGINA SOBRE
+   ========================================= */
+
+.sobre-detalhado {
+    padding: 60px 10%;
+    min-height: 100vh;
+}
+
+.sobre-header {
+    margin-bottom: 40px;
+}
+
+.tag {
+    color: #ff3c3c;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* Grid de Cards */
+.grid-sobre {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Card Individual */
+.card-texto {
+    background: #151515;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #222;
+    transition: 0.3s ease;
+}
+
+.card-texto:hover {
+    border-color: #ff3c3c;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 60, 60, 0.1);
+}
+
+.card-texto i {
+    font-size: 35px;
+    color: #ff3c3c;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.card-texto h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.card-texto p {
+    color: #aaa;
+    line-height: 1.7;
+}
+
+/* Seção de Skills/Estudos */
+.metas h3 {
+    margin-bottom: 20px;
+}
+
+.status-estudo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-tag {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    color: #eee;
+    transition: 0.3s;
+}
+
+.skill-tag:hover {
+    background: #ff3c3c;
+    border-color: #ff3c3c;
+}
+
+.btn-voltar {
+    margin-top: 50px;
+}
+
+/* Ajustes para o MODO CLARO (.dark) */
+.dark .card-texto {
+    background: #fff;
+    border-color: #ddd;
+    color: #111;
+}
+
+.dark .card-texto p {
+    color: #555;
+}
+
+.dark .skill-tag {
+    background: #eee;
+    color: #333;
+    border-color: #ddd;
+}
